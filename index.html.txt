@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Para ti</title>
+  <style>
+    /* Aquí puedes cambiar los colores y el estilo */
+    body { 
+      display: flex; 
+      justify-content: center; 
+      align-items: center; 
+      height: 100vh; 
+      margin: 0;
+      font-family: 'Georgia', serif; 
+      text-align: center; 
+      background-color: #fdfaf6; /* Color de fondo cálido */
+      padding: 20px; 
+      color: #4a4a4a;
+    }
+    .contenedor {
+      max-width: 600px;
+      padding: 40px;
+      background: white;
+      border-radius: 15px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    }
+    h1 { 
+      font-size: 28px; 
+      font-weight: normal;
+      line-height: 1.5;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="contenedor">
+    <h1 id="frase">Respirando...</h1>
+  </div>
+
+  <script>
+    // Aquí puedes agregar todas las frases que quieras
+    const frases = [
+      "frase 1.",
+      "frase 2.",
+      "frase 3.",
+      "frase 4.",
+      "frase 5.",
+      "frase 6.",
+      "frase 7."
+    ];
+
+    // Esta línea elige una frase al azar matemáticamente
+    const fraseAleatoria = frases[Math.floor(Math.random() * frases.length)];
+    
+    // Esta línea muestra la frase elegida en la pantalla
+    document.getElementById("frase").innerText = fraseAleatoria;
+  </script>
+
+</body>
+</html>
