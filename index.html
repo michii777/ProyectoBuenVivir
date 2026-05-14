@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mensaje de día </title>
+  <title>Mensaje del día </title>
   <style>
     /* cambiar los colores y el estilo lol*/
     body { 
@@ -24,6 +24,7 @@
       background: white;
       border-radius: 20px;
       box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+      z-index: 10;
     }
     h1 { 
       font-size: 28px; 
@@ -38,8 +39,10 @@
     <h1 id="frase">Respirando...</h1>
   </div>
 
+  <script<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+  
   <script>
-    // agregar todas las frases
+  // agregar todas las frases
     const frases = [
       "Skibiddi.",
       "hola.",
@@ -61,6 +64,14 @@
     
     // muestra la frase elegida en la pantalla
     document.getElementById("frase").innerText = fraseAleatoria;
+
+    confetti({
+      particleCount: 100,
+      spread: 80,
+      origin:{y:0.6},
+      shapes: ['star'],
+      colors: ['#606bbf', '#ffd700', '#ff69b4'] //azul, dorado, rosita
+    });
   </script>
 
 </body>
