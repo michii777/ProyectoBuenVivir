@@ -4,6 +4,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Mensaje del día </title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600&family=Lora:wght@400;500&family=Cormorant+Garamond:wght@400;500&display=swap" rel="stylesheet">
   <style>
     /* cambiar los colores y el estilo lol*/
     body { 
@@ -12,7 +15,7 @@
       align-items: center; 
       height: 100vh; 
       margin: 0;
-      font-family: 'Verdana', sans-serif; 
+      font-family: 'Lora', serif; 
       text-align: center; 
       background-color: #f5e4e4; /* fondo cálido */
       padding: 12px; 
@@ -20,16 +23,34 @@
     }
     .contenedor {
       max-width: 600px;
-      padding: 40px;
+      padding: 40px 20px;
       background: white;
       border-radius: 20px;
       box-shadow: 0 4px 15px rgba(0,0,0,0.05);
       z-index: 10;
     }
+    @media (max-width: 480px){
+      .contenedor{
+        padding: 30px 15px;
+        border-radius: 15px;
+      }
+    }
+    
     h1 { 
       font-size: 28px; 
-      font-weight: normal;
-      line-height: 1.5;
+      font-weight: 400;
+      line-height: 1.6;
+      letter-spacing: 0.5px;
+    }
+    @media (max-width: 768px) {
+      h1{
+        font-size: 22px;
+      }
+    }
+    @media (max-width: 480px) {
+      h1{
+        font-size: 18px;
+      }
     }
   </style>
 </head>
